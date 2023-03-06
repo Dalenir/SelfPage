@@ -14,9 +14,9 @@ html {
 @media screen and (max-width: 1500px) {
     #TLDR {
     height: 50%;
-    border-radius: 15%;
+    border-radius: 80px;
     object-fit: cover;
-    box-shadow: 15px 20px darkgray;
+    box-shadow: 10px 14px darkgray;
     }
 
     html {
