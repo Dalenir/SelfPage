@@ -11,7 +11,7 @@ html {
     -50px 75px / 500px 170px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     #TLDR {
     height: 50%;
     border-radius: 35%;
