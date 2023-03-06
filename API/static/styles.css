@@ -1,0 +1,12 @@
+#TLDR {
+    height: 50%;
+    border-radius: 80px;
+    object-fit: cover;
+    box-shadow: 7px 10px darkgray;
+}
+
+html {
+    min-height:100%;
+    /* update the 50px 50px to control the size */
+    background: url('data:image/svg+xml;utf8,<svg style="margin:25px; background-color: rgb(210, 210, 210);" xmlns="http://www.w3.org/2000/svg"><text x="0" y="125" fill="rgb(220, 220, 220)" font-weight="bold" font-size="125px" text-decoration="underline">Backend</text></svg>') -50px 75px / 500px 170px;
+}

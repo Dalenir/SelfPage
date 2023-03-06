@@ -6,7 +6,7 @@ services:
     build:
       context: ../API
       dockerfile: api.dockerfile
-    container_name: LittleAPI
+    container_name: SelfPage
     env_file:
       - .env
     ports:

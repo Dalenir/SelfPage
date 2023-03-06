@@ -1,17 +1,13 @@
 from fastapi import FastAPI, Path
-from fastapi.encoders import jsonable_encoder
-from fastapi.exceptions import RequestValidationError
-from starlette import status
-from starlette.requests import Request
-from starlette.responses import JSONResponse
 from uvicorn import Server, Config
-
-from API.endpoints import example_points
-from API.settings import Settings, main_settings
+from fastapi.staticfiles import StaticFiles
+from endpoints import pages
+from settings import Settings, main_settings
 from api_loggers.log import main_logger
 
 app = FastAPI()
-app.include_router(example_points.router)
+app.include_router(pages.router)
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 def server_setup(settings: Settings = main_settings):
