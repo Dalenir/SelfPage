@@ -3,14 +3,34 @@
         <title>Code sorcerer for hire</title>
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='flavicon.png') }}">
         <link href="{{ url_for('static', path='styles.css') }}" rel="stylesheet">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/share.css' rel='stylesheet'>
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/code-slash.css' rel='stylesheet'>
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-button-o.css' rel='stylesheet'>
+        <script src="{{ url_for('static', path='i_really_dk_js.js') }}" defer></script>
+
     </head>
     <body>
         <div style="display: flex; justify-content: center; align-items: center; height: 377px;">
-            <div id="cv_butt">
+            <div style="display: flex; flex-direction: column">
+                <div style="height: 150px;"></div>
                 <a href="{{ url_for('static', path='cv.pdf') }}" download="CV George Paramzin Python Backend">
-                    <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR">
+                    <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR" style="height: 200px">
                 </a>
+                <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 30px">
+                    <div id="share_butt" class="secondaty_button">
+                        <p id="cptext" style="position: fixed; transform: translateY(300%)">Link copied</p>
+                        <i class="gg-share" style="--ggs: 2.3; color: #191970; position: relative; left: -15px;"></i>
+                    </div>
+                    <div id="source_butt" class="secondaty_button">
+                        <a href="https://github.com/Dalenir" target="_blank">
+                            <i class="gg-code-slash" style="--ggs: 2.3; color: #191970;"></i>
+                        </a></div>
+                    <div id="boop_butt" class="secondaty_button"><i class="gg-play-button-o" style="--ggs: 2.3; color: #191970;"></i></div>
+                </div>
+                <h1 id="demo"></h1>
+                <audio id="demo2"></audio>
             </div>
         </div>
+
     </body>
 </html>

@@ -1,6 +1,7 @@
 fastapi
 uvicorn
 Jinja2
+websockets
 colorama
 
 
