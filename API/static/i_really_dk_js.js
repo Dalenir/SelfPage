@@ -1,6 +1,6 @@
 async function funk() {
 
-    let ind = parseInt(sessionStorage.getItem("ind")) ?? 1;
+    let ind = parseInt(sessionStorage.getItem("ind")) || 1;
 
     const ctx = new AudioContext();
     let audio;
