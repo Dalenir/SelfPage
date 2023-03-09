@@ -1,7 +1,6 @@
-from fastapi import Request, APIRouter, WebSocket, Header
+from fastapi import Request, APIRouter, Header
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
 from starlette.responses import FileResponse
 
 router = APIRouter()
