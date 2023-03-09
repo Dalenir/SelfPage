@@ -29,6 +29,7 @@ services:
       - 'certs:/etc/nginx/certs'
       - 'conf:/etc/nginx/conf.d'
       - '/var/run/docker.sock:/tmp/docker.sock:ro'
+      - '.templates:/etc/nginx/sites-enabled'
     restart: 'always'
     networks:
       - ltl_net
