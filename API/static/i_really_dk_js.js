@@ -38,6 +38,10 @@ async function copyUrl() {
   }, 1000);
 }
 
+document.addEventListener("DOMContentLoaded",function(){
+    let node = document.querySelector('#cptext');
+    node.classList.remove('preload');
+});
 
 document.querySelector("#boop_butt").addEventListener("click", funk)
 document.querySelector("#share_butt").addEventListener("click", copyUrl)

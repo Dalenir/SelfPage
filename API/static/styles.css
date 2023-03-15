@@ -29,16 +29,48 @@ html {
     display: flex;
 }
 
+.secondaty_button:active {
+    border: rgb(220, 220, 220) solid 5px;
+    background: rgb(220, 220, 220);
+
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 #cptext {
+    color: #778899;
   opacity: 0;
-  transition: 1s;
-    background: lightgray;
-    font-size: 20px;
+  font-size: 20px;
+  transition: 0.5s;
+  position: fixed;
+  transform: translateY(300%)
 }
 
 #cptext.fade-in {
   opacity: 1;
-  transition: 1s;
+  transition: 0.4s;
+}
+
+.gg-share {
+    --ggs: 2.3;
+    color: #191970;
+    position: relative;
+    left: -15px;
+}
+
+.gg-code-slash {
+    --ggs: 2.3;
+    color: #191970;
+}
+
+.gg-play-button-o {
+    --ggs: 2.3;
+    color: #191970;
 }
 
 @media screen and (max-width: 1500px) {
@@ -54,4 +86,5 @@ html {
         background: url('data:image/svg+xml;utf8,<svg style="margin:25px; background-color: rgb(210, 210, 210);" xmlns="http://www.w3.org/2000/svg"><text x="0" y="125" fill="rgb(220, 220, 220)" font-weight="bold" font-size="125px" text-decoration="underline">Backend</text></svg>')
         -50px 75px / 550px 170px;
     }
+
 }
