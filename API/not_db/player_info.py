@@ -10,7 +10,7 @@ from not_db.summary import ssum, motivate
 class PlayerData:
 
     PLs = {
-        "Python": "About 1,5 years of expirience. Main duty at all my commercial orders and positions.",
+        "Python": "About 1,5 years of commercial experience. Main instrument and duty at all my commercial orders and positions.",
         "JavaScript": "About 0,5 years of fragmentary expirience. Right now building a solid foundation.",
     }
 
@@ -94,7 +94,8 @@ class PlayerData:
         'Persistency'
     ]
 
-    boring_stuff = """Let's save time:\n\nI grew up in corrupt state and saw effects of "small" deals on conscience. There is no invisible deals, no matter the size of man. I won't work for or help employer linked to dictatorial or corrupt gov. Prefer losing "unique chance" & money than getting involved in something karmically bad.\nYeah, funny, I know."""
+    boring_stuff = """
+    Let's save time:\n\nI grew up in corrupt state and saw effects of "small" deals on conscience. There is no invisible deals, no matter the size of man. I won't work for or help employer linked to dictatorial or corrupt gov. Prefer losing "unique chance" & money than getting involved in something karmically bad.\nYeah, funny, I know."""
 
     summary = ssum
     motivate = motivate
