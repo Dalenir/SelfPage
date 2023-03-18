@@ -3,35 +3,166 @@
         <title>Code sorcerer for hire</title>
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='flavicon.png') }}">
         <link href="{{ url_for('static', path='styles.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', path='collps.css') }}" rel="stylesheet">
+
+
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/share.css' rel='stylesheet'>
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/code-slash.css' rel='stylesheet'>
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-button-o.css' rel='stylesheet'>
+
         <script src="{{ url_for('static', path='i_really_dk_js.js') }}" defer></script>
 
     </head>
     <body>
-        <div style="display: flex; justify-content: center; align-items: center; height: 377px;">
-            <div style="display: flex; flex-direction: column">
-                <div style="height: 150px;"></div>
-                <a href="{{ url_for('static', path='cv.pdf') }}" download="CV George Paramzin Python Backend" target="_blank">
-                    <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR" style="height: 200px">
-                </a>
-                <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 30px">
-                    <div id="share_butt" class="secondaty_button">
-                        <p id="cptext" class="preload">Link copied</p>
-                        <i class="gg-share"></i>
-                    </div>
-                    <a href="https://github.com/Dalenir" target="_blank">
-                        <div id="source_butt" class="secondaty_button">
-                            <i class="gg-code-slash"></i>
+        <div id="mommy_flex"">
+            <div class="side_column">
+                <div class="accordion-body">
+                    <div class="accordion">
+                        <h1>Skills by role</h1>
+                        <hr>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">Developer</div>
+                          <div class="content">
+                              <h3>Programming Languages</h3>
+                              <ul>
+                                {% for item in PlayerData.PLs %}
+                                    <li>{{ item }}</li>
+                                    <p>{{ PlayerData.PLs[item] }}</p>
+                                {% endfor %}
+                              </ul>
+                              <hr>
+                              <h3>Python path:</h3>
+                                  {% for item in PlayerData.PythonSkills %}
+                                      <ul class="nests_list">
+                                      <h4>{{ item }}:</h4>
+                                      <ul>
+                                      {% for item2 in PlayerData.PythonSkills[item] %}
+                                          <li>{{ item2 }}</li>
+                                      {% endfor %}
+                                      </ul>
+                                      </ul>
+                                  {% endfor %}
+                          </div>
                         </div>
-                    </a>
-                    <div id="boop_butt" class="secondaty_button"><i class="gg-play-button-o" style="--ggs: 2.3; color: #191970;"></i></div>
+                        </div>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">DevOps</div>
+                          <div class="content">
+                            <ul>
+                                {% for item in PlayerData.DevOpsSkills %}
+                                    <li><b>{{ item }}:</b></li>
+                                    <p>{{ PlayerData.DevOpsSkills[item] }}</p>
+                                {% endfor %}
+                            </ul>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">AQA</div>
+                          <div class="content">
+                              <ul>
+                                {% for item in PlayerData.AQASkills %}
+                                    <li><p>{{ item }}</p></li>
+                                {% endfor %}
+                            </ul>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">Project Manager</div>
+                          <div class="content">
+                            {% for item in PlayerData.TeamManagement %}
+                                <h3>{{ item }}:</h3>
+                                <ul class="nests_list">
+                                    <ul>
+                                    {% for item2 in PlayerData.TeamManagement[item] %}
+                                        <li><p>{{ item2 }}</p></li>
+                                    {% endfor %}
+                                    </ul>
+                                </ul>
+                            {% endfor %}
+                          </div>
+                        </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <h1 id="demo"></h1>
+            </div>
+            <div id="main_column">
+                    <div style="margin-top: 50px;">
+                        <a href="{{ url_for('static', path='cv.pdf') }}" download="CV George Paramzin Python Backend" target="_blank">
+                        <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR" style="height: 200px">
+                    </a>
+                    </div>
+                    <div id="buttons_block" style="column-gap: 75px; align-content: flex-start">
+                        <div id="share_butt" class="secondaty_button">
+                            <i class="gg-share"></i>
+                        </div>
+                        <p id="cptext" class="preload">Link copied</p>
+                        <a href="https://github.com/Dalenir" target="_blank">
+                            <div id="source_butt" class="secondaty_button">
+                                <i class="gg-code-slash"></i>
+                            </div>
+                        </a>
+                        <div id="boop_butt" class="secondaty_button">
+                            <i class="gg-play-button-o" style="--ggs: 2.3; color: #191970;"></i>
+                        </div>
+                    </div>
+                <div id="about_cont" style="padding-top: 33px;">
+                    <h1>About me</h1>
+                    <hr>
+                    <div class="back_contaiter" style="width: 100%; padding-top: 10px;">
+                        <h2 style="text-align: center">Principles Warning</h2>
+                        <hr class="smaller_hr">
+                        <p style="margin-left: 5%; padding-bottom: 10px; font-size: 18px; color: #671206; font-weight: 600;">
+                            {{ PlayerData.boring_stuff | replace("\n", "<br>") | safe }}
+                        </p>
+                        <h2 style="text-align: center">Hello world!</h2>
+                        <hr class="smaller_hr">
+                        <p style="margin-left: 5%; padding-bottom: 10px; font-size: 18px;">
+                            {{ PlayerData.summary | replace("\n", "<br>") | safe }}
+                        </p>
+                        <h2 style="text-align: center">Motivation</h2>
+                        <hr class="smaller_hr">
+                        <p style="margin-left: 5%; padding-bottom: 10px; font-size: 18px;">
+                            {{ PlayerData.motivate | replace("\n", "<br>") | safe }}
+                        </p>
+                    </div>
+
+                </div>
                 <audio id="demo2"></audio>
             </div>
+            <div class="side_column">
+                <div class="accordion-body">
+                    <div class="accordion">
+                        <h1>Why me?</h1>
+                        <hr>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">Soft skills</div>
+                          <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
+                        </div>
+                        </div>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">Common CS skills</div>
+                          <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
+                        </div>
+                        </div>
+                        <div class="back_contaiter">
+                        <div class="container">
+                          <div class="label">Pet Projects</div>
+                          <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
-
     </body>
 </html>

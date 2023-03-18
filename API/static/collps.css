@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* Sets the background color of the body to blue. Sets font to Rubik */
+
+body {
+  font-family: 'rubik', sans-serif;
+}
+
+/* Aligns the heading text to the center. */
+
+h1 {
+  text-align: center;
+  font-size: 47px;
+}
+
+.accordion {
+  width: 100%;
+  color: black;
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.back_contaiter {
+  background: rgb(248, 248, 255, 0.7);
+  width: 100%;
+}
+
+
+/* Positions the labels relative to the .container. Adds padding to the top and bottom and increases font size. Also makes its cursor a pointer */
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+/* Positions the plus sign 5px from the right. Centers it using the transform property. */
+
+.accordion .label::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%) translateX(-100%);
+}
+
+/* Hides the content (height: 0), decreases font size, justifies text and adds transition */
+
+.accordion .content {
+  position: relative;
+  max-height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.4s;
+}
+
+/* Adds a horizontal line between the contents */
+
+hr {
+  width: 90%;
+  border: 1px solid grey;
+}
+
+.smaller_hr {
+  width: 80%;
+}
+
+/* Unhides the content part when active. Sets the height */
+
+.accordion .container.active .content {
+  max-height: 300%;
+  transition: max-height 0.5s ease-in;
+}
+
+p{
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+.accordion .container .content .nests_list {
+  padding-left: 15px;
+}
+
+.accordion .container .content ul{
+  padding-left: 33px;
+}
+
+.accordion .container .content h4{
+  margin: 0.5em;
+}
+
+
+/* Changes from plus sign to negative sign once active */
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}

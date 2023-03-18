@@ -46,3 +46,13 @@ document.addEventListener("DOMContentLoaded",function(){
 document.querySelector("#boop_butt").addEventListener("click", funk)
 document.querySelector("#share_butt").addEventListener("click", copyUrl)
 
+const accordion = document.getElementsByClassName('container');
+
+for (let i=0; i<accordion.length; i++) {
+    console.log(accordion[i])
+    console.log(accordion[i].getElementsByClassName("label")[0])
+    accordion[i].getElementsByClassName("label")[0].addEventListener('click', function () {
+      console.log('a')
+    accordion[i].classList.toggle('active')
+  })
+}
