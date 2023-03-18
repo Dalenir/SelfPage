@@ -145,21 +145,29 @@
                         <div class="back_contaiter">
                         <div class="container">
                           <div class="label">Soft skills</div>
-                          <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
+                          <div class="content">
+                              <div style="display: flex; flex-wrap: wrap;">
+                                {% for item in PlayerData.soft_skills %}
+                                    <div style="background-color: #0000a4; color: #ffd07b; margin: 0.25em; font-size: 1em; font-weight: 700; font-family: 'Courier New', Courier, monospace; padding: 0.5em; border-radius: 0.8em; border: #778899 solid 0.1em"> {{ item }} </div>
+                                {% endfor %}
+                              </div>
+                          </div>
                         </div>
                         </div>
                         <div class="back_contaiter">
                         <div class="container">
                           <div class="label">Common CS skills</div>
-                          <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
+                          <div class="content">
+                            <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; background-color: cadetblue; border-radius: 0.3em">
+                              {% for item in PlayerData.notable %}
+                                  <div style="font-family: Consolas; font-size: 1em; font-weight: 600; color: lightgray; padding: 1.3em; margin: 0.5em; background-color: black; text-align: center;">
+                                      > {{ item }}
+                                  </div>
+                              {% endfor %}
+                            </div>
+                          </div>
                         </div>
                         </div>
-                        <div class="back_contaiter">
-                        <div class="container">
-                          <div class="label">Pet Projects</div>
-                          <div class="content">Hypertext Markup Language (HTML) is a computer language that makes up most web pages and online applications. A hypertext is a text that is used to reference other pieces of text, while a markup language is a series of markings that tells web servers the style and structure of a document. HTML is very simple to learn and use.</div>
-                        </div>
-                    </div>
                 </div>
             </div>
             </div>
