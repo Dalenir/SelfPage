@@ -4,6 +4,7 @@
         <link rel="icon" type="image/x-icon" href="{{ url_for('static', path='flavicon.png') }}">
         <link href="{{ url_for('static', path='styles.css') }}" rel="stylesheet">
         <link href="{{ url_for('static', path='collps.css') }}" rel="stylesheet">
+        <link href="{{ url_for('static', path='pretty_buttons.css') }}" rel="stylesheet">
 
 
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/share.css' rel='stylesheet'>
@@ -95,10 +96,14 @@
                 </div>
             </div>
             <div id="main_column">
-                    <div style="margin-top: 50px;">
+                    <div  style="margin-top: 50px; height: 200px; width: 400px;">
                         <a href="{{ url_for('static', path='cv.pdf') }}" download="CV George Paramzin Python Backend" target="_blank">
-                        <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR" style="height: 200px">
-                    </a>
+                            <button class="btn-40">
+                              <span class="new" style="background-image: url('{{ url_for('static', path='for_button.png') }}')">Download CV</span>
+                              <span class="old">TL;DR</span>
+                            </button>
+                        </a>
+{#                        <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR" style="height: 200px">#}
                     </div>
                     <div id="buttons_block" style="column-gap: 75px; align-content: flex-start">
                         <div id="share_butt" class="secondaty_button">
