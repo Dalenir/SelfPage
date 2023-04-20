@@ -10,15 +10,15 @@ from not_db.summary import ssum, motivate
 class PlayerData:
 
     PLs = {
-        "Python": "About 1,5 years of commercial experience. Main instrument and duty at all my commercial orders and positions.",
-        "JavaScript": "About 0,5 years of fragmentary expirience. Right now building a solid foundation.",
+        "Python": "More than 3 years of commercial experience. Main instrument and duty at all my recent orders and positions.",
+        "JavaScript": "About 1 year of fragmentary expirience. Nothing magic here, but I know React and used TS.",
     }
 
     PythonSkills = {
         'Frameworks': [
             'Aiogram',
-            'Django',
             'FastAPI',
+            'Django',
             'Selenium',
             'SQLAlchemy',
             'Pytest'
@@ -28,7 +28,9 @@ class PlayerData:
             'pydantic',
             'psycopg2',
             'motor',
-            'redis-py'
+            'redis-py',
+            'pandas',
+            'plotly'
         ]
     }
 
@@ -75,7 +77,9 @@ class PlayerData:
         'Postman',
         'Blockchain',
         'SSH',
-        'HTML/CSS'
+        'HTML/CSS',
+        'React',
+        'SQL',
     ]
 
     soft_skills = [
@@ -95,7 +99,7 @@ class PlayerData:
     ]
 
     boring_stuff = """
-    Let's save time:\n\nI grew up in corrupt state and saw effects of "small" deals on conscience. There is no invisible deals, no matter the size of man. I won't work for or help employer linked to dictatorial or corrupt gov. Prefer losing "unique chance" & money than getting involved in something karmically bad.\nYeah, funny, I know."""
+    Let's save time:\n\nI grew up in corrupt state and saw effects of "small" deals on conscience. There is no invisible deals, no matter the size of man. I won't work for or help employer linked to dictatorial or corrupt gov."""
 
     summary = ssum
     motivate = motivate

@@ -12,6 +12,12 @@ templates = Jinja2Templates(directory="templates")
 async def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request, 'PlayerData': PlayerData})
 
+
+@router.get("/what_you_need")
+async def what_you_need(request: Request):
+    return templates.TemplateResponse()
+
+
 @router.get("/bips")
 async def home(index: str = Header(default="1")):
     dex = int(index) % 12
