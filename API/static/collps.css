@@ -21,8 +21,14 @@ h1 {
 .accordion .container {
   position: relative;
   margin: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
 }
+
+.content > ul {
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
+}
+
 
 .back_contaiter {
   background: rgb(248, 248, 255, 0.7);
@@ -58,11 +64,12 @@ h1 {
   position: relative;
   height: auto;
   max-height: 0;
-  font-size: 20px;
+  font-size: 23px;
   text-align: justify;
   width: 100%;
   overflow: hidden;
   transition: max-height 0.4s;
+  padding-right: 10px;
 }
 
 /* Adds a horizontal line between the contents */

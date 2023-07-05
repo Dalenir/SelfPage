@@ -103,6 +103,38 @@ html {
     margin-top: 30px;
 }
 
+.prl_libs_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.prl_libs_container > p {
+    !important; text-align: center;
+}
+
+.pyth_prl_lib {
+    color: #FFD944;
+    background-color: #3676A7;
+    display: block;
+    border-radius: 0.3em;
+    padding: 7px;
+}
+
+.js_prl_lib {
+    font-weight: bold;
+    color: black;
+    background-color: #F7DF1D;
+    display: block;
+    padding: 10px;
+}
+
+.prl_descr_container {
+    text-align: center;
+}
+
 
 @media screen and (max-width: 1500px) {
     #TLDR {
@@ -136,5 +168,7 @@ html {
         margin-top: auto;
         order: 2;
     }
+
+
 
 }

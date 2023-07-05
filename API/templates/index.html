@@ -24,33 +24,46 @@
                         <hr>
                         <div class="back_contaiter">
                         <div class="container active">
-                          <div class="label">Developer</div>
+                          <div class="label">I'm creating:</div>
                           <div class="content">
                               <h3>Programming Languages</h3>
                               <ul>
-                                {% for item in PlayerData.PLs %}
-                                    <li>{{ item }}</li>
-                                    <p>{{ PlayerData.PLs[item] }}</p>
-                                {% endfor %}
-                              </ul>
-                              <hr>
-                              <h3>Python path:</h3>
-                                  {% for item in PlayerData.PythonSkills %}
-                                      <ul class="nests_list">
-                                      <h4>{{ item }}:</h4>
-                                      <ul>
-                                      {% for item2 in PlayerData.PythonSkills[item] %}
-                                          <li>{{ item2 }}</li>
-                                      {% endfor %}
-                                      </ul>
-                                      </ul>
-                                  {% endfor %}
+                                <li>
+                                <b>Python:</b>
+                                {{ PlayerData.PLs['Python'] }}
+                                    <d class = prl_descr_container>
+                                        <p>Mainly, but not limited:</p>
+                                        <d class="prl_libs_container">
+                                            {% for item in PlayerData.PythonSkills %}
+                                                <d class="pyth_prl_lib">
+                                                    {{ item }}
+                                                </d>
+                                            {% endfor %}
+                                        </d>
+                                    </d>
+                                    <hr/>
+                                </li>
+                                <li>
+                                    <b>JavaScript:</b>
+                                    {{ PlayerData.PLs['JavaScript'] }}
+                                    <d class = prl_descr_container>
+                                        <p>Love to create with:</p>
+                                        <d class="prl_libs_container">
+                                            {% for item in PlayerData.JavaScriptSkills %}
+                                                <d class="js_prl_lib">
+                                                            {{ item }}
+                                                </d>
+                                            {% endfor %}
+                                        </d>
+                                    </d>
+                                </li>
+                                </ul>
                           </div>
                         </div>
                         </div>
                         <div class="back_contaiter">
                         <div class="container">
-                          <div class="label">DevOps</div>
+                          <div class="label">I'm deploying:</div>
                           <div class="content">
                             <ul>
                                 {% for item in PlayerData.DevOpsSkills %}
@@ -63,7 +76,7 @@
                         </div>
                         <div class="back_contaiter">
                         <div class="container">
-                          <div class="label">AQA</div>
+                          <div class="label">I'm testing:</div>
                           <div class="content">
                               <ul>
                                 {% for item in PlayerData.AQASkills %}
@@ -75,7 +88,7 @@
                         </div>
                         <div class="back_contaiter">
                         <div class="container">
-                          <div class="label">Project Manager</div>
+                          <div class="label">I'm teamworking:</div>
                           <div class="content">
                             {% for item in PlayerData.TeamManagement %}
                                 <h3>{{ item }}:</h3>
@@ -148,19 +161,8 @@
                     <div class="accordion">
                         <h1>Why me?</h1>
                         <hr>
-                        <div class="back_contaiter">
-                        <div class="container active">
-                          <div class="label">Soft skills</div>
-                          <div class="content">
-                              <div style="display: flex; flex-wrap: wrap;">
-                                {% for item in PlayerData.soft_skills %}
-                                    <div style="background-color: DarkSlateBlue; color: Beige; margin: 0.25em 0.25em 0.6em;font-size: 1em; font-weight: 700; font-family: 'Courier New', Courier, monospace; padding: 0.6em; border-radius: 0.8em; box-shadow: 4px 3px 11px -1px rgba(0,0,0,0.42);"> {{ item }} </div>
-                                {% endfor %}
-                              </div>
-                          </div>
-                        </div>
-                        </div>
-                        <div class="back_contaiter">
+
+                                            <div class="back_contaiter">
                         <div class="container active">
                           <div class="label">Common skills</div>
                           <div class="content">
@@ -174,6 +176,20 @@
                           </div>
                         </div>
                         </div>
+
+                        <div class="back_contaiter">
+                        <div class="container active">
+                          <div class="label">Soft skills</div>
+                          <div class="content">
+                              <div style="display: flex; flex-wrap: wrap;">
+                                {% for item in PlayerData.soft_skills %}
+                                    <div style="background-color: DarkSlateBlue; color: Beige; margin: 0.25em 0.25em 0.6em;font-size: 1em; font-weight: 700; font-family: 'Courier New', Courier, monospace; padding: 0.6em; border-radius: 0.8em; box-shadow: 4px 3px 11px -1px rgba(0,0,0,0.42);"> {{ item }} </div>
+                                {% endfor %}
+                              </div>
+                          </div>
+                        </div>
+                        </div>
+
                 </div>
                 </div>
             </div>

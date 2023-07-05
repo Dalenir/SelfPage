@@ -11,28 +11,34 @@ class PlayerData:
 
     PLs = {
         "Python": "More than 3 years of commercial experience. Main instrument and duty at all my recent orders and positions.",
-        "JavaScript": "About 1 year of fragmentary expirience. Nothing magic here, but I know React and used TS.",
+        "JavaScript": "1 year of experience. Not my main language, but I have solid skills in it.",
     }
 
-    PythonSkills = {
-        'Frameworks': [
-            'Aiogram',
+    PythonSkills = [
             'FastAPI',
+            'SQLAlchemy',
+            'Aiogram',
             'Django',
             'Selenium',
-            'SQLAlchemy',
-            'Pytest'
-        ],
-        'Favorite libs': [
+            'Pytest',
             'aiohttp',
             'pydantic',
             'psycopg2',
             'motor',
             'redis-py',
             'pandas',
-            'plotly'
+            'plotly',
+            'aio-pika'
         ]
-    }
+
+    JavaScriptSkills = [
+        'React',
+        'React-router',
+        'Redux',
+        'TypeScript',
+        'Node.js'
+    ]
+
 
     DevOpsSkills = {
         'Linux': 'I have extensive experience working with Linux and administering Linux-based systems. Currently, I am deepening my understanding of Linux through the "Linux & BSD" library by No Starch Press',
@@ -78,7 +84,6 @@ class PlayerData:
         'Blockchain',
         'SSH',
         'HTML/CSS',
-        'React',
         'SQL',
     ]
 
