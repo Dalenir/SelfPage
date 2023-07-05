@@ -136,6 +136,21 @@ html {
 }
 
 
+#about_cont > .back_contaiter > p {
+    margin-left: 5%;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#about_cont > .back_contaiter > h2 {
+    text-align: center;
+}
+
+
+
+
+
 @media screen and (max-width: 1500px) {
     #TLDR {
     height: 50%;
@@ -169,6 +184,22 @@ html {
         order: 2;
     }
 
+    .accordion > .back_contaiter .content {
+    font-size: 27px;
+    }
 
+    #about_cont > .back_contaiter > p {
+    font-size: 28px;
+    padding-bottom: 3rem;
+    }
+
+    #about_cont > .back_contaiter > h2 {
+        font-size: 2.5em;
+    }
+
+    .content > ul > li {
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
 
 }

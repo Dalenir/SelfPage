@@ -41,8 +41,8 @@
                                             {% endfor %}
                                         </d>
                                     </d>
-                                    <hr/>
                                 </li>
+                                <hr/>
                                 <li>
                                     <b>JavaScript:</b>
                                     {{ PlayerData.PLs['JavaScript'] }}
@@ -87,7 +87,7 @@
                         </div>
                         </div>
                         <div class="back_contaiter">
-                        <div class="container">
+                        <div class="back_contaiter">
                           <div class="label">I'm teamworking:</div>
                           <div class="content">
                             {% for item in PlayerData.TeamManagement %}
@@ -136,19 +136,19 @@
                     <h1>About me</h1>
                     <hr>
                     <div class="back_contaiter" style="width: 100%; padding-top: 10px;">
-                        <h2 style="text-align: center">Principles Warning</h2>
+                        <h2>Principles Warning</h2>
                         <hr class="smaller_hr">
-                        <p style="margin-left: 5%; padding-bottom: 10px; font-size: 18px; color: #671206; font-weight: 600;">
+                        <p style="color: #671206;">
                             {{ PlayerData.boring_stuff | replace("\n", "<br>") | safe }}
                         </p>
-                        <h2 style="text-align: center">Hello world!</h2>
+                        <h2>Hello world!</h2>
                         <hr class="smaller_hr">
-                        <p style="margin-left: 5%; padding-bottom: 10px; font-size: 18px;">
+                        <p>
                             {{ PlayerData.summary | replace("\n", "<br>") | safe }}
                         </p>
-                        <h2 style="text-align: center">Motivation</h2>
+                        <h2>Motivation</h2>
                         <hr class="smaller_hr">
-                        <p style="margin-left: 5%; padding-bottom: 10px; font-size: 18px;">
+                        <p>
                             {{ PlayerData.motivate | replace("\n", "<br>") | safe }}
                         </p>
                     </div>
