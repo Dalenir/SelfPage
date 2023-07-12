@@ -116,7 +116,6 @@
                               <span class="old">TL;DR</span>
                             </button>
                         </a>
-{#                        <img src="{{ url_for('static', path='img_downl.jpg') }}" id="TLDR" style="height: 200px">#}
                     </div>
                     <div id="buttons_block" style="column-gap: 75px; align-content: flex-start">
                         <div id="share_butt" class="secondaty_button">
@@ -136,17 +135,17 @@
                     <h1>About me</h1>
                     <hr>
                     <div class="back_contaiter" style="width: 100%; padding-top: 10px;">
-                        <h2>Principles Warning</h2>
+                        <h2 style="color: #671206">Principles Warning</h2>
                         <hr class="smaller_hr">
-                        <p style="color: #671206;">
+                        <p style="color: #671206; font-size: 18px;">
                             {{ PlayerData.boring_stuff | replace("\n", "<br>") | safe }}
                         </p>
-                        <h2>Hello world!</h2>
+                        <h2>Hello. It's me:</h2>
                         <hr class="smaller_hr">
                         <p>
                             {{ PlayerData.summary | replace("\n", "<br>") | safe }}
                         </p>
-                        <h2>Motivation</h2>
+                        <h2>What fuel my fire?</h2>
                         <hr class="smaller_hr">
                         <p>
                             {{ PlayerData.motivate | replace("\n", "<br>") | safe }}

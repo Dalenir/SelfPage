@@ -137,9 +137,9 @@ html {
 
 
 #about_cont > .back_contaiter > p {
-    margin-left: 5%;
-    padding-bottom: 10px;
-    font-size: 18px;
+    margin: 0 5%;
+    padding-bottom: 5%;
+    font-size: 22px;
     font-weight: 600;
 }
 
